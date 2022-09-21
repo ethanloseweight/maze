@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table width="40%">
+    <thead>
+        <tr>
+            <th> Player Name </th>
+            <th> Score </th>
+            <th> Play Time </th>
+            <th> Play Date </th>
+        </tr>
+    </thead>
+</table>
+
+<table width="40%">
+    <tbody>
+        {% for score in scores %}
+        <tr>
+            <td> {{ score['name'] }}</td>
+            <td width="130"> {{ score['score'] }}</td>
+            <td width="160"> {{ score['play time'] }}</td>
+            <td width="160"> {{ score['date'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+{% endblock %}

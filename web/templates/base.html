@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<style>
+    body {
+      counter-reset: section;
+    }
+    table {
+      border: 1px solid black;
+    }
+    th {
+      border: 1px solid black;
+    }
+    tbody tr::before {
+        counter-increment: section;
+        content: "Rank " counter(section) ". ";
+    }
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <title>Leaderboard</title>
+    <meta name="description" content="Demo website scores">
+    <meta name="author" content="Me">
+</head>
+<body>
+<h1>AmongUs Mazegame Leaderboard</h1>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
